@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/anhui.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/aomen.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/beijing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/chongqing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/fujian.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/gansu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guizhou.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hainan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hebei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/heilongjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/henan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hubei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hunan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangsu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jilin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/liaoning.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/neimenggu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/ningxia.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/qinghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/sichuan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/taiwan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/tianjin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xianggang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xinjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xizang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/yunnan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/zhejiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM "></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js "></script>
+</head>
+
+<body>
+    <div id="main" style="width: 1200px;height:600px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+    "backgroundColor": "#fff",
+    "legend": {
+        "selectedMode": true,
+        "data": [
+            ""
+        ],
+        "show": true,
+        "top": "top",
+        "left": "center",
+        "orient": "horizontal"
+    },
+    "tooltip": {},
+    "visualMap": {
+        "text": [
+            "hight",
+            "low"
+        ],
+        "left": "left",
+        "textStyle": {
+            "color": "#000"
+        },
+        "max": 100,
+        "top": "bottom",
+        "min": 0,
+        "calculable": true,
+        "type": "continuous",
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        }
+    },
+    "toolbox": {
+        "top": "center",
+        "left": "right",
+        "feature": {
+            "saveAsImage": {
+                "show": true
+            }
+        },
+        "show": true,
+        "orient": "vertical"
+    },
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3"
+    ],
+    "series": [
+        {
+            "data": [
+                {
+                    "value": 5,
+                    "name": "河源市"
+                },
+                {
+                    "value": 4,
+                    "name": "珠海市"
+                },
+                {
+                    "value": 4,
+                    "name": "惠州市"
+                },
+                {
+                    "value": 4,
+                    "name": "茂名市"
+                },
+                {
+                    "value": 4,
+                    "name": "东莞市"
+                },
+                {
+                    "value": 2,
+                    "name": "肇庆市"
+                },
+                {
+                    "value": 14,
+                    "name": "佛山市"
+                },
+                {
+                    "value": 4,
+                    "name": "清远市"
+                },
+                {
+                    "value": 6,
+                    "name": "湛江市"
+                },
+                {
+                    "value": 77,
+                    "name": "广州市"
+                },
+                {
+                    "value": 76,
+                    "name": "潮州市"
+                },
+                {
+                    "value": 10,
+                    "name": "汕头市"
+                },
+                {
+                    "value": 6,
+                    "name": "揭阳市"
+                },
+                {
+                    "value": 4,
+                    "name": "梅州市"
+                },
+                {
+                    "value": 19,
+                    "name": "深圳市"
+                },
+                {
+                    "value": 5,
+                    "name": "云浮市"
+                },
+                {
+                    "value": 1,
+                    "name": "韶关市"
+                },
+                {
+                    "value": 5,
+                    "name": "阳江市"
+                },
+                {
+                    "value": 3,
+                    "name": "江门市"
+                },
+                {
+                    "value": 4,
+                    "name": "汕尾市"
+                }
+            ],
+            "roam": true,
+            "name": "",
+            "symbol": "circle",
+            "type": "map",
+            "mapType": "广东"
+        }
+    ],
+    "title": {
+        "text": "广东地图示例",
+        "left": "auto",
+        "subtext": "",
+        "subtextStyle": {
+            "fontSize": 12,
+            "color": "#aaa"
+        },
+        "textStyle": {
+            "fontSize": 18,
+            "color": "#000"
+        }
+    }
+};
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
